@@ -61,7 +61,7 @@ copyright = f"{datetime.date.today().year}, Canonical Ltd"
 #  Update with the official URL of your docs or leave empty if unsure.
 # NOTE: The Open Graph Protocol (OGP) enhances page display in a social graph
 #       and is used by social media platforms; see https://ogp.me/
-ogp_site_url = "https://canonical-ubuntu-hw-support.readthedocs-hosted.com/"
+ogp_site_url = "https://documentation.ubuntu.com/hardware-support/"
 
 # Preview name of the documentation website
 #  To use a different name for the project in previews, update as needed.
@@ -152,7 +152,7 @@ html_theme_options = {
 # Project slug; see https://meta.discourse.org/t/what-is-category-slug/87897
 # TODO: If your documentation is hosted on https://docs.ubuntu.com/,
 #       uncomment and update as needed.
-# slug = ''
+slug = "hardware-support"
 
 #######################
 # Sitemap configuration: https://sphinx-sitemap.readthedocs.io/
@@ -296,8 +296,8 @@ rst_epilog = """
 # NOTE: If set, adding ':manpage:' to an .rst file
 #       adds a link to the corresponding man section at the bottom of the page.
 manpages_url = (
-    'https://manpages.ubuntu.com/manpages/resolute/en/'
-    'man{section}/{page}.{section}.html'
+    "https://manpages.ubuntu.com/manpages/resolute/en/"
+    "man{section}/{page}.{section}.html"
 )
 
 # Specifies a reST snippet to be prepended to each .rst file
