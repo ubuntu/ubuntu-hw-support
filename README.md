@@ -12,7 +12,7 @@ Currently, the repository hosts two documentation sets that used to be published
 
 The project Git repository is located at [github.com/ubuntu/ubuntu-hw-support](https://github.com/canonical/ubuntu-hw-support/).
 
-The generated documentation is hosted at [ubuntu.com/hardware/docs](https://ubuntu.com/hardware/docs/)].
+The generated documentation is hosted at [ubuntu.com/hardware/docs](https://ubuntu.com/hardware/docs/).
 
 The continuous integration results are available at [ubuntu-hw-support/actions](https://github.com/ubuntu/ubuntu-hw-support/actions/).
 
