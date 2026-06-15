@@ -1,4 +1,4 @@
-[![Documentation Status](https://readthedocs.com/projects/canonical-ubuntu-hardware-support/badge/?version=latest)](https://canonical-ubuntu-hardware-support.readthedocs-hosted.com/?badge=latest)
+[![Documentation Status](https://readthedocs.com/projects/canonical-ubuntu-hardware-supportubuntu/badge/?version=latest)](https://canonical-ubuntu-hardware-supportubuntu.readthedocs-hosted.com/?badge=latest)
 
 
 # Ubuntu hardware support documentation
@@ -10,11 +10,11 @@ Currently, the repository hosts two documentation sets that used to be published
 
 ## Project homepage
 
-The project Git repository is located at [ https://github.com/canonical/ubuntu-hw-support](https://github.com/canonical/ubuntu-hw-support/).
+The project Git repository is located at [github.com/ubuntu/ubuntu-hw-support](https://github.com/canonical/ubuntu-hw-support/).
 
-The generated documentation is hosted at [ubuntu-hw-support.readthedocs-hosted.com](https://canonical-ubuntu-hardware-support.readthedocs-hosted.com/).
+The generated documentation is hosted at [ubuntu.com/hardware/docs](https://ubuntu.com/hardware/docs/)].
 
-The continuous integration results are available at [ubuntu-hw-support/actions](https://github.com/canonical/ubuntu-hw-support/actions/).
+The continuous integration results are available at [ubuntu-hw-support/actions](https://github.com/ubuntu/ubuntu-hw-support/actions/).
 
 
 ## RISC-V image cookbook
