@@ -1,4 +1,4 @@
-[![Documentation Status](https://readthedocs.com/projects/canonical-ubuntu-hardware-supportubuntu/badge/?version=latest)](https://canonical-ubuntu-hardware-supportubuntu.readthedocs-hosted.com/?badge=latest)
+[![Documentation Status](https://app.readthedocs.com/projects/canonical-ubuntu-hw-supportubuntu/badge/?version=latest)](https://ubuntu.com/hardware/docs/image-cookbook/?badge=latest)
 
 
 # Ubuntu hardware support documentation
