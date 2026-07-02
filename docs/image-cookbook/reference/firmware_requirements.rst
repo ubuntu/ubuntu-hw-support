@@ -13,6 +13,8 @@ Ubuntu boots via UEFI. The requirements specified in the
 <https://github.com/arm-software/ebbr>`_
 must be fulfilled.
 
+Either a device-tree or ACPI tables must be provided.
+
 U-Boot
 ''''''
 
@@ -26,6 +28,30 @@ In U-Boot the following configuration settings are needed:
 * CONFIG_CMD_NVEDIT_EFI=y
 * CONFIG_EFI_CMD_EFIDEBUG=y
 * CONFIG_HEXDUMP=y
+
+Device-tree
+-----------
+
+Ideally the device-tree provided by the firmware is a full description of the
+device and can directly be used to boot the Linux kernel. As device-trees in
+Linux change of the years, differences between the firmware device-tree and the
+Linux device-tree arise.
+
+To provide full device functionality, Ubuntu tries to load a kernel device-tree
+matching both the device and the kernel version. This requires that the
+following properties provided in the device's device-tree exactly match the
+corresponding kernel definitions:
+
+* /compatible - This property is used by systemd-boot or stubble for matching.
+* /model      - This property is used by flash-kernel for matching.
+
+Kernel device-trees often lack memory reservations (e.g. for OpenSBI) and
+other required information, like MAC addresses of network interfaces. Therefore,
+a firmware using device-trees should implement the
+`EFI_DT_FIXUP_PROTOCOL <https://github.com/U-Boot-EFI/EFI_DT_FIXUP_PROTOCOL>`_.
+As of 26.04, Ubuntu is still using version v0.05 of the protocol with GUID
+e617d64c-fe08-46da-f4dc-bbd5870c7300. It is advisable to also implement the
+newer version with GUID 60ed6ba9-dfef-4799-ac7b-75e0f833456c.
 
 SMBIOS
 ------
