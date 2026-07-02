@@ -50,8 +50,10 @@ Checklist for Ubuntu images
 
           $ sudo snap install hello
 	  $ /snap/bin/hello
+          $ sudo snap install core26
      - * The snap is installed successfully.
        * The hello command is functional.
+       * The core26 snap on RISC-V requires RVA23.
    * - LXD can be used.
      - .. prompt:: bash $ auto
 
@@ -61,15 +63,25 @@ Checklist for Ubuntu images
 	  # login
 	  $ lxd init --minimal
 	  $ lxc image list ubuntu:
-	  $ lxc launch ubuntu:24.04 mycontainer
+	  $ lxc launch ubuntu:26.04 mycontainer
 	  $ lxc shell mycontainer
 	  $ logout # (in container)
 	  $ lxc list
 	  $ lxc stop mycontainer
 	  $ lxc delete mycontainer
 	  $ lxc list mycontainer
+	  $ lxc launch --vm ubuntu:26.04 myvm
+	  $ lxc exec myvm /bin/bash
+	  $ exit # (in virtual machine)
+	  $ lxc stop myvm
+	  $ lxc delete myvm
+	  $ lxc list myvm
      - * The snap is installed successfully.
        * A container can be created.
        * The container can be started.
        * The shell can be reached.
        * The container can be deleted.
+       * The virtual machine can be started.
+         (On RISC-V LXD from channel latest/edge was needed in May 2026.)
+       * The shell can be reached.
+       * The virtual machine can be deleted.
