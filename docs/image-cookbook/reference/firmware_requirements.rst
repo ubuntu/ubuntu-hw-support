@@ -30,8 +30,25 @@ In U-Boot the following configuration settings are needed:
 SMBIOS
 ------
 
-An SMBIOS table should be present.
+An SMBIOS table should be present. It needs to provide accurate data to manage
+the infrastructure. This includes:
 
+* Platform Firmware Information (Type 0)
+
+  * Vendor
+  * Firmware version
+  * Firmware release date
+
+* System Information (Type 1)
+
+  * Manufacturer
+  * Product name
+  * Version
+  * Serial number
+
+* Processor Information (Type 4)
+
+  * Processor version
 
 EDK II
 ''''''
