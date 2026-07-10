@@ -85,8 +85,8 @@ Running via U-Boot
 
       .. note::
 
-          Ubuntu release 25.10 requires the RVA23S64 ISA profile, which is only
-          available on QEMU 10.1 or later.
+          Ubuntu releases from 25.10 onward require the RVA23S64 ISA profile,
+          which is only available on QEMU 10.1 or later.
           If your QEMU version is preceding 10.1 (e.g. on Ubuntu 25.04 and
           below), you can only run Ubuntu 25.04 and below. In that case, remove
           ``-cpu rva23s64``.
