@@ -173,6 +173,7 @@ efi
 eth
 ethernet
 facto
+fastboot
 fdtfile
 flashrom
 flavour
@@ -181,6 +182,7 @@ flintstone
 fred
 fstab
 fulfill
+fwupd
 gibibytes
 github
 githubusercontent
@@ -253,6 +255,7 @@ sftp
 smp
 snapcraft
 snapd
+SpacemiT
 standardized
 subiquity
 sudo

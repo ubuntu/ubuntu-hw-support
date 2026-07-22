@@ -10,3 +10,4 @@ currently no maintenance of images by Canonical.
     :maxdepth: 1
 
     raxda-rock-4a
+    spacemit-k3-pico-itx
