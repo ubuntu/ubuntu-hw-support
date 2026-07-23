@@ -21,7 +21,6 @@ Putting the board in "flash mode"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: /images/spacemit-k3-pico-itx-flash.jpg
-   :target: ../../_images/spacemit-k3-pico-itx-flash.jpg
    :alt: SpacemiT TitanTools home page
    :width: 40%
    :align: center
@@ -61,7 +60,6 @@ This will open the graphical interface of TitanTools.
    Please proceed at your own risk.
 
 .. image:: /images/spacemit-titantools.png
-   :target: ../../_images/spacemit-titantools.png
    :align: center
    :width: 70%
    :alt: SpacemiT TitanTools home page
@@ -141,12 +139,10 @@ Then, reboot the board, press F2 and select the USB thumb drive in "Boot Manager
 as a boot target.
 
 .. image:: /images/spacemit-edk2-boot.png
-   :target: ../../_images/spacemit-edk2-boot.png
    :alt: SpacemiT boot splash
    :width: 49 %
 
 .. image:: /images/spacemit-edk2-boot-manager.png
-   :target: ../../_images/spacemit-edk2-boot-manager.png
    :alt: SpacemiT boot menu
    :width: 49 %
 
@@ -155,12 +151,10 @@ For Desktop, it can take a while for the board to reach graphical interface,
 please be patient (around 3-5 minutes).
 
 .. image:: /images/spacemit-ubuntu-install.png
-   :target: ../../_images/spacemit-ubuntu-install.png
    :alt: Ubuntu Desktop installer image, Grub prompt
    :width: 49 %
 
 .. image:: /images/spacemit-ubuntu-installer.png
-   :target: ../../_images/spacemit-ubuntu-installer.png
    :alt: Ubuntu Desktop installer
    :width: 49 %
 
@@ -168,7 +162,6 @@ Afterwards, you can follow the installer to install on the on-board UFS storage
 or an NVMe drive. The UFS should be ``sda - KINGSTON``.
 
 .. image:: /images/spacemit-install-drive.png
-   :target: ../../_images/spacemit-install-drive.png
    :alt: Select drive for the Ubuntu installer
    :align: center
    :width: 79 %
