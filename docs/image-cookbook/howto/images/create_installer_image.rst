@@ -12,8 +12,8 @@ You can install it with
 
 .. prompt:: text $ auto
 
-    $ sudo apt-get update
-    $ sudo apt-get livecd-rootfs
+    $ sudo apt update
+    $ sudo apt install livecd-rootfs
 
 The package provides three scripts in /usr/share/livecd-rootfs/live-build/auto/:
 
