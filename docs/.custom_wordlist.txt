@@ -5,6 +5,7 @@ ALSA
 ASSY
 Allwinner
 Autotools
+Bianbu
 BOOTRISCV
 BootNext
 BootOrder
