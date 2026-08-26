@@ -39,6 +39,7 @@ A simple script is available on `GitHub <https://github.com/vhaudiquet/flash-k3-
 Using it should be simple:
 
 .. code-block:: text
+
     curl https://raw.githubusercontent.com/vhaudiquet/flash-k3-firmware/refs/heads/main/flash-k3-firmware.sh | bash
 
 .. warning::
