@@ -35,16 +35,16 @@ Connect an USB Type-C cable to your host computer and the connector (18) on the 
 Installing firmware using Ubuntu packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A simple script is available on `GitHub <https://github.com/vhaudiquet/flash-k3-firmware>`_ to flash the necessary firmware on the board.
+A simple script is available on `GitHub <https://github.com/canonical/spacemit-k3-flash-firmware>`_ to flash the necessary firmware on the board.
 Using it should be simple:
 
 .. code-block:: text
 
-    curl https://raw.githubusercontent.com/vhaudiquet/flash-k3-firmware/refs/heads/main/flash-k3-firmware.sh | bash
+    curl https://raw.githubusercontent.com/canonical/spacemit-k3-flash-firmware/refs/heads/main/flash-k3-firmware.sh | bash
 
 .. warning::
     The firmware flashing script is **experimental**. Please report any issue on the
-    `GitHub repository <https://github.com/vhaudiquet/flash-k3-firmware/issues>`_.
+    `GitHub repository <https://github.com/canonical/spacemit-k3-flash-firmware/issues>`_.
     The Ubuntu RISC-V team is trying hard to provide the best user experience on the SpacemiT K3 for official images,
     but unfortunately firmware updates are necessary.
 
