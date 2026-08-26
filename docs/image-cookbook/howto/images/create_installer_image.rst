@@ -5,6 +5,9 @@
 Create installer image
 =======================
 
+Install ``livecd-rootfs``
+-------------------------
+
 As of 2026 :lp-pkg:`livecd-rootfs` is the tool used by Canonical to create
 both preinstalled images as well as installer images.
 
@@ -26,7 +29,10 @@ config
 build
     Execute the build
 
-Here is an example of building a riscv64 ubuntu-server installer image:
+Build an Ubuntu image
+---------------------
+
+Here is an example of building a riscv64 ubuntu-server installer image, **on a native riscv64 host**:
 
 .. prompt:: text $ auto
 
@@ -47,6 +53,13 @@ Here is an example of building a riscv64 ubuntu-server installer image:
     /usr/share/livecd-rootfs/live-build/auto/build
 
 The output of this build is file 'livecd.ubuntu-server.iso*.
+
+.. note::
+
+    **Cross-building** a ``riscv64`` image from an ``amd64`` host is currently **not** supported.
+
+Customizing the build
+---------------------
 
 Which image is built is controlled by environment variables.
 
