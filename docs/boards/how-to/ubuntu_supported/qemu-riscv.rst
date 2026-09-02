@@ -90,6 +90,10 @@ Running via U-Boot
           If your QEMU version is preceding 10.1 (e.g. on Ubuntu 25.04 and
           below), you can only run Ubuntu 25.04 and below. In that case, remove
           ``-cpu rva23s64``.
+          Alternatively you can download and build a later version of QEMU from source 
+          (see https://www.qemu.org/download/) 
+          When you invoke it, remember to make sure you call the version you have built, 
+          rather than any version already installed on the system.
 
   \-machine
       selects the platform emulated by QEMU.
