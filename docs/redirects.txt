@@ -27,6 +27,7 @@ boards/how-to/qemu-riscv/ boards/how-to/ubuntu_supported/qemu-riscv/
 boards/how-to/raspberry-pi/ boards/how-to/ubuntu_supported/raspberry-pi/
 boards/how-to/sifive-hifive-unmatched/ boards/how-to/ubuntu_supported/sifive-hifive-unmatched/
 boards/how-to/sipeed-licheerv-dock/ boards/how-to/ubuntu_supported/sipeed-licheerv-dock/
+boards/how-to/community_supported/spacemit-k3-pico-itx/ boards/how-to/ubuntu_supported/spacemit-k3-pico-itx/
 boards/how-to/starfive-visionfive-2-lite/ boards/how-to/ubuntu_supported/starfive-visionfive-2-lite/
 boards/how-to/starfive-visionfive-2/ boards/how-to/ubuntu_supported/starfive-visionfive-2/
 boards/how-to/starfive-visionfive/ boards/how-to/ubuntu_supported/starfive-visionfive/
