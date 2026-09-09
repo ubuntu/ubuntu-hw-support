@@ -7,34 +7,6 @@ Since Ubuntu 25.04, all `Raspberry Pi`_ models with a CSI port can use the
 camera stack.
 
 
-Supported camera modules
-------------------------
-
-We support all the official Raspberry Pi camera modules listed on the
-`Raspberry Pi camera hardware spec`_.
-
-Also, the current ``libcamera`` in Ubuntu supports the following camera
-sensors:
-
-- IMX219
-- IMX283
-- IMX290
-- IMX296
-- IMX327
-- IMX378
-- IMX415
-- IMX462
-- IMX477
-- IMX500
-- IMX519
-- IMX708
-- OV5647
-- OV64A40
-- OV7251
-- OV9281
-- SE327M12
-
-
 Connecting a camera module
 --------------------------
 
@@ -120,6 +92,35 @@ from the camera.
 
 - The ``Save Raw`` button can be used to capture a RAW image.
 
+
+Supported camera modules
+------------------------
+
+We support all the official Raspberry Pi camera modules listed on the
+`Raspberry Pi camera hardware spec`_.
+
+Also, the current ``libcamera`` in Ubuntu supports the following camera
+sensors:
+
+- IMX219
+- IMX283
+- IMX290
+- IMX296
+- IMX327
+- IMX378
+- IMX415
+- IMX462
+- IMX477
+- IMX500
+- IMX519
+- IMX708
+- OV5647
+- OV64A40
+- OV7251
+- OV9281
+- SE327M12
+
+
 rpicam-apps
 -----------
 
@@ -152,9 +153,7 @@ While ``picamera2`` is not in the Ubuntu archive yet, you can install it from a
 
 ::
 
-    sudo apt install ffmpeg
-    sudo add-apt-repository ppa:r41k0u/python3-simplejpeg
-    sudo apt install python3-picamera2
+    sudo apt install ffmpeg python3-picamera2
 
 
 You can use ``picamera2`` on Ubuntu the same way as you would on Raspberry Pi
