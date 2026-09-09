@@ -29,7 +29,7 @@ The packages can be installed with the following commands:
 .. code-block:: text
 
     sudo apt update
-    sudo apt install opensbi qemu-system-riscv64 qemu-efi-riscv64 u-boot-qemu
+    sudo apt install opensbi qemu-system-riscv qemu-efi-riscv64 u-boot-qemu
 
 
 Using the pre-installed server image
