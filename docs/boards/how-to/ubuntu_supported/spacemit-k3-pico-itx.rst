@@ -154,6 +154,6 @@ available on the `ubuntu-risc-v-team/k3 ppa <https://launchpad.net/~ubuntu-risc-
    sudo add-apt-repository ppa:ubuntu-risc-v-team/k3
    sudo apt update
    # Install spacemit-firmware metapackage to keep all firmware updated
+   # The metapackage contains a flasher script that will re-flash and verify
+   # the firmware directly on the board
    sudo apt install spacemit-firmware
-   # ...or install each firmware package manually
-   sudo apt install u-boot-spl-spacemit spacemit-ec-firmware opensbi-spacemit esos-spacemit edk2-spacemit
