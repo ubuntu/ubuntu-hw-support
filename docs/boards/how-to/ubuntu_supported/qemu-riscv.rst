@@ -229,3 +229,49 @@ Limitations
 * The number of virtual CPUs was limited to 8 before QEMU 7.0. The limit was
   raised in QEMU 7.0 to 512. OpenSBI is limited to 128 CPUs. U-Boot supports
   32 CPUs.
+
+Experimental Desktop images
+---------------------------
+
+Ubuntu RISC-V Desktop images are now available for testing. Those are experimental images
+that are in no way supported. If you encounter issues with them, please report bugs on Launchpad
+to give us feedback.
+
+A regular Ubuntu Desktop image is available, but the Gnome desktop environment takes too much time
+to load under QEMU (30+ minutes). A Xubuntu Minimal image, using the XFCE environment, is more suitable
+for testing under emulation.
+
+* Download the image:
+
+  .. ubuntu-images::
+      :releases: resolute-
+      :image-types: minimal
+      :flavor: xubuntu
+      :archs: riscv64
+      :matches: (riscv64\.iso)
+
+* Run the image under QEMU, using EDK2:
+
+.. code-block:: text
+
+    sudo apt update
+    sudo apt install qemu-efi-riscv64
+    cp /usr/share/qemu-efi-riscv64/RISCV_VIRT_VARS.fd .
+    qemu-system-riscv64 \
+      -cpu rva23s64 \
+      -machine virt,acpi=off -m 4G -smp cpus=2 \
+      -serial mon:stdio \
+      -device virtio-gpu-pci -full-screen \
+      -drive if=pflash,format=raw,unit=0,file=/usr/share/qemu-efi-riscv64/RISCV_VIRT_CODE.fd,readonly=on \
+      -drive if=pflash,format=raw,unit=1,file=RISCV_VIRT_VARS.fd,readonly=off \
+      -netdev user,id=net0 \
+      -device virtio-net-device,netdev=net0 \
+      -device virtio-rng-pci \
+      -device qemu-xhci \
+      -device usb-kbd \
+      -device usb-mouse \
+      -device usb-tablet,bus=usb-bus.0 \
+      -drive file=xubuntu-*-riscv64.iso,format=raw,if=virtio
+
+This will by default start the VM with graphical output in full screen. 
+Remove ``-full-screen`` flag in ``-device virtio-gpu-pci`` argument to show the graphical output windowed instead.
