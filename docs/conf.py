@@ -1,6 +1,5 @@
 import datetime
 import os
-import sys
 import yaml
 
 from docutils.parsers.rst import roles
@@ -152,7 +151,7 @@ html_theme_options = {
 # Project slug; see https://meta.discourse.org/t/what-is-category-slug/87897
 # TODO: If your documentation is hosted on https://docs.ubuntu.com/,
 #       uncomment and update as needed.
-slug = 'hardware/docs'
+slug = "hardware/docs"
 
 #######################
 # Sitemap configuration: https://sphinx-sitemap.readthedocs.io/
@@ -240,10 +239,6 @@ linkcheck_retries = 3
 #       substitution, deflist, linkify
 # myst_enable_extensions = set()
 
-# Append the path for the ubuntu_images extension; remove this if/when the
-# sphinx_ubuntu_images package is brought up to date
-sys.path.append("./_ext")
-
 # Custom Sphinx extensions; see
 # https://www.sphinx-doc.org/en/master/usage/extensions/index.html
 # NOTE: The canonical_sphinx extension is required for the starter pack.
@@ -262,7 +257,7 @@ extensions = [
     "sphinx_related_links",
     "sphinx_roles",
     "sphinx_terminal",
-    # "sphinx_ubuntu_images",
+    "sphinx_ubuntu_images",
     "sphinx_youtube_links",
     "sphinxcontrib.cairosvgconverter",
     "sphinx_last_updated_by_git",
@@ -271,7 +266,6 @@ extensions = [
     # Extensions for this docs set:
     "sphinx-prompt",
     "sphinx.ext.extlinks",
-    "ubuntu_images",
 ]
 
 # Excludes files or directories from processing
@@ -301,8 +295,8 @@ rst_epilog = """
 # NOTE: If set, adding ':manpage:' to an .rst file
 #       adds a link to the corresponding man section at the bottom of the page.
 manpages_url = (
-    'https://manpages.ubuntu.com/manpages/resolute/en/'
-    'man{section}/{page}.{section}.html'
+    "https://manpages.ubuntu.com/manpages/resolute/en/"
+    "man{section}/{page}.{section}.html"
 )
 
 # Specifies a reST snippet to be prepended to each .rst file
