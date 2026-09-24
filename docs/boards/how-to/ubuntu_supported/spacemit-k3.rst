@@ -1,7 +1,7 @@
-.. _install-ubuntu-on-the-spacemit-k3-pico-itx:
+.. _install-ubuntu-on-spacemit-k3:
 
-Install Ubuntu on the SpacemiT K3 Pico-ITX
-==========================================
+Install Ubuntu on SpacemiT K3 boards
+====================================
 
 Flashing initial firmware on the board
 --------------------------------------
@@ -16,21 +16,48 @@ official Ubuntu images.
     Those images are only supported by SpacemiT. If you wish to install one of those images, see:
 
     - `SpacemiT's Ubuntu Image repository <https://github.com/spacemit-com/K3-Ubuntu-Images>`_
-    - `SpacemiT's User Guide <https://www.spacemit.com/community/document/info?lang=en&nodepath=hardware/eco/k3_pico/pico_user_guide.md>`_
+    - `K3 Pico-ITX User Guide <https://www.spacemit.com/community/document/info?lang=en&nodepath=hardware/eco/k3_pico/pico_user_guide.md>`_
+    - `K3 CoM260 Kit User Guide <https://www.spacemit.com/community/document/info?lang=en&nodepath=hardware/eco/k3_com260/com260_user_guide.md>`_
 
 Putting the board in "flash mode"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: /images/spacemit-k3-pico-itx-flash.jpg
-   :alt: SpacemiT TitanTools home page
-   :width: 40%
-   :align: center
+.. tab-set::
 
-Power off the board, then press and hold the "FDL Flashing button" (2).
-While holding, connect an USB-C power cable to the first USB-C connector (17).
-Release the "FDL Flashing button" (2). The board is now in flashing mode.
+   .. tab-item:: K3 Pico-ITX
 
-Connect an USB Type-C cable to your host computer and the connector (18) on the board.
+      .. image:: /images/spacemit-k3-pico-itx-flash.jpg
+         :alt: SpacemiT K3 Pico-ITX board with the FDL flashing button (2)
+               and the USB-C connectors (17, 18) highlighted
+         :width: 40%
+         :align: center
+
+      Power off the board, then press and hold the "FDL Flashing button" (2).
+      While holding, connect an USB-C power cable to the first USB-C connector (17).
+      Release the "FDL Flashing button" (2). The board is now in flashing mode.
+
+      Connect an USB Type-C cable to your host computer and the connector (18) on the board.
+
+   .. tab-item:: K3 CoM260
+
+      .. image:: /images/spacemit-k3-com260-flash.jpg
+         :alt: SpacemiT K3 CoM260 kit with the FORCE_RECOVERY (FC_REC) pin attached to a yellow cable, 
+               and GND pin next to it in black.
+         :width: 70%
+         :align: center
+
+      The CoM260 has no dedicated flashing button. You will need a push button
+      or jumper wire to short pins on the 12-pin debug header of the carrier board.
+
+      Power off the board, then short the FORCE_RECOVERY ("FC_REC") pin 
+      (connected to a yellow wire on the image) to a "GND" pin
+      (for example, the one connected to a black wire on the image).
+      While shorting the pins, power the board on through the 12V DC power jack.
+      Release the button. The board is now in flashing mode.
+
+      Connect an USB Type-C cable to your host computer and to the USB-C
+      connector on the carrier board. This connector does not provide power
+      to the board.
 
 Installing firmware using Ubuntu packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -106,6 +133,48 @@ You can download and burn a preview Ubuntu image for the board.
 
 When selecting a desktop image, you will need to connect a keyboard, mouse and screen to the board.
 For a server install, you can use the serial console (UART) or keyboard and screen as well.
+
+Connecting a screen
+"""""""""""""""""""
+
+.. tab-set::
+
+   .. tab-item:: K3 Pico-ITX
+
+      Connect a monitor with DisplayPort input to the full-featured USB-C
+      connector (the one on the edge of the board) with a full-featured USB-C cable. 
+      A monitor that delivers 65 W or more over USB-C can power the
+      board and carry the display signal over the same cable.
+      The board also has an eDP connector for embedded panels.
+
+   .. tab-item:: K3 CoM260
+
+      Connect a monitor to the DisplayPort Type-A connector on the carrier board.
+      The board also has a MIPI DSI FPC connector for LCD panels.
+
+Connecting the serial console
+"""""""""""""""""""""""""""""
+
+For a server install, you can drive the installer from the serial console.
+Both boards expose it on a debug header, at 115200 baud; see
+:ref:`connect-to-a-uart-console` for general instructions on connecting a
+USB-to-TTL adapter.
+
+.. tab-set::
+
+   .. tab-item:: K3 Pico-ITX
+
+      The serial console is exposed on the UART pin header (labeled "UART DEBUG") on the board.
+      Connect the TX, RX and GND pins to your USB-to-TTL adapter.
+
+   .. tab-item:: K3 CoM260
+
+      The serial console is exposed on the 12-pin debug header of the carrier
+      board. From left to right, UART_TXD is pin 8, UART_RXD is pin 9, and GND is available on
+      pins 2, 4, 6 (any will work). Connect those pins to your USB-to-TTL adapter.
+
+Booting the installer
+"""""""""""""""""""""
 
 Then, reboot the board, press F2 and select the USB thumb drive in "Boot Manager"
 as a boot target.
