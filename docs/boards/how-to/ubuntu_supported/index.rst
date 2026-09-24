@@ -23,7 +23,7 @@ hardware under Ubuntu.
     raspberry-pi
     sifive-hifive-unmatched
     sipeed-licheerv-dock
-    spacemit-k3-pico-itx
+    spacemit-k3
     starfive-visionfive
     starfive-visionfive-2
     starfive-visionfive-2-lite
