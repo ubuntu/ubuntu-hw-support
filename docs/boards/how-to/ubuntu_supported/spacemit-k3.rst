@@ -59,11 +59,12 @@ Putting the board in "flash mode"
       connector on the carrier board. This connector does not provide power
       to the board.
 
-Installing firmware using Ubuntu packages
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Flashing firmware from a host computer using Ubuntu packages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A simple script is available on `GitHub <https://github.com/canonical/spacemit-k3-flash-firmware>`_ to flash the necessary firmware on the board.
-Using it should be simple:
+
+On your host computer, with the K3 board connected and in flash mode:
 
 .. code-block:: text
 
