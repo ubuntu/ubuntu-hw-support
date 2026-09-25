@@ -51,13 +51,18 @@ Installing Ubuntu on boards
 Each row links the per-board installation pages for a specific platform.
 
 * **Raspberry Pi**: :ref:`Install Ubuntu on the Raspberry Pi <install-ubuntu-on-the-raspberry-pi>` • :ref:`Install directly <install-ubuntu-on-raspberry-pi-directly>` • :ref:`Install via PC <install-ubuntu-on-raspberry-pi-via-pc>`
+* **SpacemiT K3**: :ref:`Install Ubuntu on SpacemiT K3 boards <install-ubuntu-on-spacemit-k3>`
+* **QEMU**: :ref:`Install Ubuntu on QEMU (ARM64) <install-ubuntu-on-qemu-arm64>` • :ref:`Install Ubuntu on QEMU (RISC-V) <install-ubuntu-on-qemu-risc-v>`
+
+Boards supported by older Ubuntu LTS releases
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * **Allwinner Nezha D1**: :ref:`Install Ubuntu on the Allwinner Nezha D1 <install-ubuntu-on-the-allwinner-nezha-d1>`
 * **DeepComputing FML13V01**: :ref:`Install Ubuntu on the DeepComputing FML13V01 <install-ubuntu-on-the-deepcomputing-fml13v01>`
 * **Microchip PIC64GX1000**: :ref:`Install Ubuntu on the Microchip PIC64GX1000 Curiosity Kit <install-ubuntu-on-the-microchip-pic64gx1000-curiosity-kit>`
 * **Microchip PolarFire SoC Icicle Kit**: :ref:`Install Ubuntu on the Microchip PolarFire SoC Icicle Kit <install-ubuntu-on-the-microchip-polarfire-soc-icicle-kit>`
 * **Milk-V Mars**: :ref:`Install Ubuntu on the Milk-V Mars <install-ubuntu-on-the-milk-v-mars>` • :ref:`Install Ubuntu on the Milk-V Mars CM and CM Lite <install-ubuntu-on-the-milk-v-mars-cm-and-cm-lite>`
 * **Pine64 Star64**: :ref:`Install Ubuntu on the Pine64 Star64 <install-ubuntu-on-the-pine64-star64>`
-* **QEMU**: :ref:`Install Ubuntu on QEMU (ARM64) <install-ubuntu-on-qemu-arm64>` • :ref:`Install Ubuntu on QEMU (RISC-V) <install-ubuntu-on-qemu-risc-v>`
 * **SiFive HiFive Unmatched**: :ref:`Install Ubuntu on the SiFive HiFive Unmatched <install-ubuntu-on-the-sifive-hifive-unmatched>`
 * **Sipeed LicheeRV Dock**: :ref:`Install Ubuntu on the Sipeed LicheeRV Dock <install-ubuntu-on-the-sipeed-licheerv-dock>`
 * **StarFive VisionFive**: :ref:`Install Ubuntu on the StarFive VisionFive <install-ubuntu-on-the-starfive-visionfive>` • :ref:`VisionFive 2 <install-ubuntu-on-the-starfive-visionfive-2>` • :ref:`VisionFive 2 Lite <install-ubuntu-on-the-starfive-visionfive-2-lite>`
