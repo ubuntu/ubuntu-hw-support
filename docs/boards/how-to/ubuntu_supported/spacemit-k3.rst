@@ -78,12 +78,12 @@ Using it should be simple:
 The script will download firmware packages from Ubuntu repositories, extract the binary payloads,
 and use `SpacemiT tools <https://github.com/spacemit-com/K3-Ubuntu-Images>`_ to flash the board.
 
-Installing an official (experimental) Ubuntu image
---------------------------------------------------
+Installing an official Ubuntu image
+-----------------------------------
 
 .. warning::
-    Right now, official Ubuntu images are **experimental**. We expect official support to come with
-    Ubuntu 26.10 Stonking Stingray release.
+    Official support for the SpacemiT K3 starts with Ubuntu 26.10 Stonking Stingray release.
+    Ubuntu 26.04 LTS might get support at a later point in time.
 
 SpacemiT's image has a vendor SpacemiT kernel that is not provided by Canonical or Ubuntu,
 and carries patches that are not upstream. Some Canonical software might not work with this kernel,
