@@ -30,10 +30,24 @@ jobs:
         run: |
           for dir in compare base; do
             pushd ${dir}/docs
-            make html
+            if make html; then
+              echo "${dir}_build_ok=true" >> "$GITHUB_ENV"
+            else
+              echo "${dir}_build_ok=false" >> "$GITHUB_ENV"
+            fi
             popd
           done
+      - name: Fail if the PR branch build failed
+        if: env.compare_build_ok != 'true'
+        run: |
+          echo "::error::The documentation build failed on the pull request branch, so removed URLs cannot be verified."
+          exit 1
+      - name: Warn if the base branch build failed
+        if: env.base_build_ok != 'true'
+        run: |
+          echo "::warning::The documentation build failed on the base branch (${{ github.event.pull_request.base.ref }}), so the URL comparison is skipped. This is a pre-existing problem on the base branch, not caused by this pull request."
       - name: Generate current URLs list
+        if: env.compare_build_ok == 'true' && env.base_build_ok == 'true'
         run: |
           for dir in compare base; do
             pushd ${dir}/docs
@@ -43,6 +57,7 @@ jobs:
             popd
           done
       - name: Compare URLs
+        if: env.compare_build_ok == 'true' && env.base_build_ok == 'true'
         run: |
           BASE_URLS_PATH="base/docs/urls.txt"
           COMPARE_URLS_PATH="compare/docs/urls.txt"
