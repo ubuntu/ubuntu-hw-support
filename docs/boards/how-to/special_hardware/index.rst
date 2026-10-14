@@ -14,3 +14,4 @@ and methods of debugging common boot problems.
     headless-usage
     uart-console
     rpi-camera
+    rpi-network-boot
