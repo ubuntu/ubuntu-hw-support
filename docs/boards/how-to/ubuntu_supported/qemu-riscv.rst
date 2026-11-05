@@ -69,8 +69,9 @@ Running via U-Boot
   .. code-block:: text
 
       qemu-system-riscv64 \
+        -machine virt,acpi=off,aia=aplic-imsic \
         -cpu rva23s64 \
-        -machine virt,acpi=off -m 4G -smp cpus=2 \
+        -m 4G -smp cpus=2 \
         -nographic \
         -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf \
         -netdev user,id=net0 \
@@ -132,8 +133,9 @@ EDK II may be used instead of U-Boot to run RISC-V virtual machines.
     sudo apt install qemu-efi-riscv64
     cp /usr/share/qemu-efi-riscv64/RISCV_VIRT_VARS.fd .
     qemu-system-riscv64 \
+      -machine virt,acpi=off,aia=aplic-imsic \
       -cpu rva23s64 \
-      -machine virt,acpi=off -m 4G -smp cpus=2 \
+      -m 4G -smp cpus=2 \
       -nographic \
       -drive if=pflash,format=raw,unit=0,file=/usr/share/qemu-efi-riscv64/RISCV_VIRT_CODE.fd,readonly=on \
       -drive if=pflash,format=raw,unit=1,file=RISCV_VIRT_VARS.fd,readonly=off \
@@ -180,8 +182,9 @@ Installing live server image
    .. code-block:: text
 
        qemu-system-riscv64 \
+         -machine virt,acpi=off,aia=aplic-imsic \
          -cpu rva23s64 \
-         -machine virt,acpi=off -m 4G -smp cpus=2 \
+         -m 4G -smp cpus=2 \
          -nographic \
          -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf \
          -netdev user,id=net0 \
@@ -213,8 +216,9 @@ To run your installed Ubuntu image use:
 .. code-block:: text
 
     qemu-system-riscv64 \
+      -machine virt,acpi=off,aia=aplic-imsic \
       -cpu rva23s64 \
-      -machine virt,acpi=off -m 4G -smp cpus=2 \
+      -m 4G -smp cpus=2 \
       -nographic \
       -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf \
       -netdev user,id=net0 \
