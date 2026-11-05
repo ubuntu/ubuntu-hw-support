@@ -89,7 +89,7 @@ Which image is built is controlled by environment variables.
 +---------------+----------+-----------------------------------------------------------------------------+
 | SUBPROJECT    | optional | E.g. *live* (for ubuntu-server), *minimized* (for minimized images)         |
 +---------------+----------+-----------------------------------------------------------------------------+
-| SUITE         | required | Ubuntu release, e.g. *resolute* for Ubuntu 26.04                            |
+| SUITE         | required | Ubuntu release, e.g. *resolute* for Ubuntu 26.04 LTS                        |
 +---------------+----------+-----------------------------------------------------------------------------+
 
 Here are some useful property combinations:
