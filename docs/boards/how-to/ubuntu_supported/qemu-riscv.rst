@@ -11,7 +11,7 @@ To boot a RISC-V virtual machine you will need the following packages
 * :lp-pkg:`opensbi` -- :term:`OpenSBI` implements the RISC-V
   Supervisor Binary Interface (:term:`SBI`).
 
-* :lp-pkg:`qemu-system-riscv64 <qemu>` -- :term:`QEMU` is used to
+* :lp-pkg:`qemu-system-riscv <qemu>` -- :term:`QEMU` is used to
   emulate a RISC-V machine.
 
 and one of
